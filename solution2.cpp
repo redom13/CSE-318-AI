@@ -195,6 +195,35 @@ void printSolutionPath(vector<vvi> solutionPath)
     }
 }
 
+int calculateInversions(vi flattenConfig){
+    int inversions = 0;
+    for (int i=0;i<flattenConfig.size();i++){
+        for (int j=i+1;j<flattenConfig.size();j++){
+            if (flattenConfig[i] > flattenConfig[j]){
+                inversions++;
+            }
+        }
+    }
+    return inversions;
+}
+
+bool isSolvable(int size,int inversions,int blankRow){
+    if (size%2==0){
+        int rowFromBottom = size - blankRow;
+        if (rowFromBottom%2==0 && inversions%2!=0){
+            return true;
+        }
+        else if (rowFromBottom%2!=0 && inversions%2==0){
+            return true;
+        }
+    }
+    else{
+        return (inversions%2==0);
+    }
+    
+    return false;
+}
+
 int main()
 {
     int size;
@@ -207,12 +236,21 @@ int main()
     cin >> size;
     start.resize(size, vi(size));
     goal.resize(size, vi(size));
+    vi flattenStart;
+    int blankRow = 0;
 
     for (int i = 0; i < size; i++)
     {
         for (int j = 0; j < size; j++)
         {
             cin >> start[i][j];
+            if (start[i][j] == 0)
+            {
+                blankRow = i;
+            }
+            else {
+                flattenStart.push_back(start[i][j]);
+            }
         }
     }
     // Goal state
@@ -229,6 +267,15 @@ int main()
                 goal[i][j] = i * size + j + 1;
             }
         }
+    }
+    // Checking if the puzzle is solvable
+    int inversions = calculateInversions(flattenStart);
+    // cout << "Inversions = " << inversions << endl;
+    // cout << "Blank Row = " << blankRow << endl;
+    if (!isSolvable(size, inversions, blankRow))
+    {
+        cout << "Unsolvable Puzzle" << endl;
+        return 0;
     }
     // Array of heuristic functions
     vector<int (*)(vvi)> heuristicFunctions = {calculateHammingDistance, calculateManhattanDistance, calculateEuclideanDistance, calculateLinearConflict};
