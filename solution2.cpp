@@ -234,8 +234,10 @@ int main()
     vector<int (*)(vvi)> heuristicFunctions = {calculateHammingDistance, calculateManhattanDistance, calculateEuclideanDistance, calculateLinearConflict};
 
     int startHeuristic = heuristicFunctions[3](start);
+    int explored = 0,expanded = 0;
     Node startNode(start, startHeuristic, 0);
     pq.push(startNode);
+    explored++;
     set<vvi> closedList;
     int minMoves = 0;
     vector<vvi> solutionPath;
@@ -243,8 +245,7 @@ int main()
     {
         Node promisingNode = pq.top();
         pq.pop();
-        if (closedList.find(promisingNode.config) != closedList.end())
-            continue;
+        expanded++;
         closedList.insert(promisingNode.config);
         // promisingNode.printConfig();
         // cout<<endl;
@@ -260,10 +261,17 @@ int main()
         {
             int childHeuristic = calculateHammingDistance(child);
             Node newNode(child, childHeuristic, promisingNode.cost + 1);
+            if (closedList.find(child) != closedList.end())
+            {
+                continue;
+            }
             pq.push(newNode);
+            explored++;
         }
     }
 
     cout << "Minimum number of moves = " << minMoves << endl;
     printSolutionPath(solutionPath);
+    cout << "Number of nodes explored = " << explored << endl;
+    cout << "Number of nodes expanded = " << expanded << endl;
 }
