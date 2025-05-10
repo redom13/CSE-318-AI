@@ -1,0 +1,24 @@
+Minimum number of moves = 4
+
+0 1 3 
+4 2 5 
+7 8 6 
+
+1 0 3 
+4 2 5 
+7 8 6 
+
+1 2 3 
+4 0 5 
+7 8 6 
+
+1 2 3 
+4 5 0 
+7 8 6 
+
+1 2 3 
+4 5 6 
+7 8 0 
+
+Number of nodes explored = 10
+Number of nodes expanded = 4

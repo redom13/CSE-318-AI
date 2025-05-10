@@ -9,13 +9,14 @@ class Node
 {
 public:
     vvi config;
-    int key, cost;
+    int key, cost, heuristic;
     Node *parent;
 
     Node(vvi config, int heuristic, int cost, Node *parent = NULL)
     {
         this->config = config;
         this->cost = cost;
+        this->heuristic = heuristic;
         this->key = cost + heuristic;
         this->parent = parent;
     }
@@ -161,12 +162,16 @@ int calculateLinearConflict(vvi config)
     {
         for (int j = 0; j < size; j++)
         {
+            if (config[i][j] == 0)
+                continue;
             int row1 = calculateRow(config[i][j], size);
             int col1 = calculateCol(config[i][j], size);
             if (row1 != i)
                 continue;
             for (int k = j + 1; k < size; k++)
             {
+                if (config[i][k] == 0)
+                    continue;
                 int row2 = calculateRow(config[i][k], size);
                 int col2 = calculateCol(config[i][k], size);
                 if (row1 == row2 && col1 > col2)
@@ -182,14 +187,18 @@ int calculateLinearConflict(vvi config)
     {
         for (int j = 0; j < size; j++)
         {
-            int row1 = calculateRow(config[i][j], size);
-            int col1 = calculateCol(config[i][j], size);
-            if (col1 != j)
+            if (config[j][i] == 0)
                 continue;
-            for (int k = i + 1; k < size; k++)
+            int row1 = calculateRow(config[j][i], size);
+            int col1 = calculateCol(config[j][i], size);
+            if (col1 != i)
+                continue;
+            for (int k = j + 1; k < size; k++)
             {
-                int row2 = calculateRow(config[k][j], size);
-                int col2 = calculateCol(config[k][j], size);
+                if (config[k][i] == 0)
+                    continue;
+                int row2 = calculateRow(config[k][i], size);
+                int col2 = calculateCol(config[k][i], size);
                 if (col1 == col2 && row1 > row2)
                 {
                     colConflict++;
@@ -210,7 +219,7 @@ void printSolutionPath(Node *solutionNode)
         solutionNode = solutionNode->parent;
     }
     reverse(solutionPath.begin(), solutionPath.end());
-    cout<<endl;
+    cout << endl;
     for (auto node : solutionPath)
     {
         node->printConfig();
@@ -260,7 +269,7 @@ struct comparator
 {
     bool operator()(Node *a, Node *b)
     {
-        return a->key > b->key;
+        return (a->key > b->key) || (a->key == b->key && a->heuristic > b->heuristic);
     }
 };
 
@@ -270,8 +279,10 @@ int main()
     vvi start, goal;
     priority_queue<Node *, vector<Node *>, comparator> pq;
     string inputFile = "input.txt";
+    string outputFile = "output.txt";
 
     freopen(inputFile.c_str(), "r", stdin);
+    freopen(outputFile.c_str(), "w", stdout);
 
     cin >> size;
     start.resize(size, vi(size));
@@ -294,6 +305,7 @@ int main()
             }
         }
     }
+    // cout << "Config taken" << endl;
     // Goal state
     for (int i = 0; i < size; i++)
     {
@@ -307,7 +319,9 @@ int main()
             {
                 goal[i][j] = i * size + j + 1;
             }
+            // cout << goal[i][j] << " ";
         }
+        // cout << endl;
     }
     // Checking if the puzzle is solvable
     int inversions = calculateInversions(flattenStart);
@@ -327,15 +341,15 @@ int main()
     pq.push(startNode);
     explored++;
     set<vvi> closedConfigList;
-    vector<Node*> closedList;
+    vector<Node *> closedList;
     int minMoves = 0;
     vector<vvi> solutionPath;
     Node *solutionNode = NULL;
     while (!pq.empty())
     {
+        // cout<<"Still in queue: " << pq.size() << endl;
         Node *promisingNode = pq.top();
         pq.pop();
-        expanded++;
         closedConfigList.insert(promisingNode->config);
         closedList.push_back(promisingNode);
         if (promisingNode->config == goal)
@@ -345,11 +359,12 @@ int main()
             minMoves = promisingNode->cost;
             break;
         }
+        expanded++;
         set<vvi> children = promisingNode->getChildren();
         for (auto child : children)
         {
-            int childHeuristic = calculateHammingDistance(child);
-            Node *newNode = new Node(child, childHeuristic, promisingNode->cost + 1,promisingNode);
+            int childHeuristic = heuristicFunctions[3](child);
+            Node *newNode = new Node(child, childHeuristic, promisingNode->cost + 1, promisingNode);
             if (closedConfigList.find(child) != closedConfigList.end())
             {
                 continue;
@@ -363,12 +378,14 @@ int main()
     printSolutionPath(solutionNode);
     cout << "Number of nodes explored = " << explored << endl;
     cout << "Number of nodes expanded = " << expanded << endl;
-    for (auto node:closedList){
+    for (auto node : closedList)
+    {
         delete node;
     }
 
-    while (!pq.empty()){
-        Node* node = pq.top();
+    while (!pq.empty())
+    {
+        Node *node = pq.top();
         pq.pop();
         delete node;
     }
