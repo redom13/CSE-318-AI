@@ -1,0 +1,403 @@
+xv6 kernel is booting
+
+hart 2 starting
+hart 1 starting
+Chosen process 1 with 10 tickets in Q1 in CPU 2
+Demoting process 1 to Q2
+Chosen process 1 with 9 tickets in Q2 in CPU 1
+Process 1 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 1 with 9 tickets in Q1 in CPU 1
+Demoting process 1 to Q2
+Chosen process 1 with 8 tickets in Q2 in CPU 1
+Process 1 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 1 with 8 tickets in Q1 in CPU 0
+Demoting process 1 to Q2
+Chosen process 1 with 7 tickets in Q2 in CPU 1
+Process 1 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 1 with 7 tickets in Q1 in CPU 1
+Demoting process 1 to Q2
+Chosen process 1 with 6 tickets in Q2 in CPU 0
+Process 1 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 1 with 10 tickets in Q1 in CPU 1
+Demoting process 1 to Q2
+Chosen process 1 with 9 tickets in Q2 in CPU 1
+Process 1 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 1 with 9 tickets in Q1 in CPU 1
+Demoting process 1 to Q2
+Chosen process 1 with 8 tickets in Q2 in CPU 1
+Process 1 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 1 with 10 tickets in Q1 in CPU 2
+Demoting process 1 to Q2
+Chosen process 1 with 9 tickets in Q2 in CPU 2
+Process 1 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 1 with 9 tickets in Q1 in CPU 0
+Demoting process 1 to Q2
+Chosen process 1 with 8 tickets in Q2 in CPU 0
+Process 1 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 1 with 8 tickets in Q1 in CPU 0
+Demoting process 1 to Q2
+Chosen process 1 with 7 tickets in Q2 in CPU 0
+Process 1 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 1 with 7 tickets in Q1 in CPU 0
+Demoting process 1 to Q2
+Chosen process 1 with 6 tickets in Q2 in CPU 1
+Process 1 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 1 with 10 tickets in Q1 in CPU 0
+Demoting process 1 to Q2
+Chosen process 1 with 9 tickets in Q2 in CPU 1
+Process 1 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 1 with 10 tickets in Q1 in CPU 2
+Demoting process 1 to Q2
+Chosen process 1 with 9 tickets in Q2 in CPU 2
+init: starting sh
+Process 1 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 2 with 10 tickets in Q1 in CPU 0
+Demoting process 2 to Q2
+Chosen process 2 with 9 tickets in Q2 in CPU 0
+Process 2 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 2 with 9 tickets in Q1 in CPU 2
+Demoting process 2 to Q2
+Chosen process 2 with 8 tickets in Q2 in CPU 1
+Process 2 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 2 with 8 tickets in Q1 in CPU 0
+Demoting process 2 to Q2
+Chosen process 2 with 7 tickets in Q2 in CPU 2
+Process 2 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 2 with 7 tickets in Q1 in CPU 0
+Demoting process 2 to Q2
+Chosen process 2 with 6 tickets in Q2 in CPU 0
+Process 2 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 2 with 6 tickets in Q1 in CPU 2
+Demoting process 2 to Q2
+Chosen process 2 with 5 tickets in Q2 in CPU 1
+Process 2 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 2 with 5 tickets in Q1 in CPU 1
+Demoting process 2 to Q2
+Chosen process 2 with 4 tickets in Q2 in CPU 1
+$ Process 2 voluntarily gave up CPU, promoting to Q1, State: 2
+dummyproc 25 &;
+Chosen process 2 with 10 tickets in Q1 in CPU 1
+Demoting process 2 to Q2
+Chosen process 2 with 9 tickets in Q2 in CPU 0
+Process 2 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 3 with 10 tickets in Q1 in CPU 1
+Demoting process 3 to Q2
+Chosen process 4 with 10 tickets in Q1 in CPU 2
+Demoting process 4 to Q2
+Chosen process 1 with 10 tickets in Q1 in CPU 2
+Demoting process 1 to Q2
+Chosen process 3 with 9 tickets in Q2 in CPU 1
+Chosen process 5 with 10 tickets in Q1 in CPU 2
+Process 3 voluntarily gave up CPU, promoting to Q1, State: 5
+Chosen process 2 with 9 tickets in Q1 in CPU 1
+$ Demoting process 2 to Q2
+Demoting process 5 to Q2
+Chosen process 5 with 9 tickets in Q2 in CPU 0
+Process 5 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 5 with 9 tickets in Q1 in CPU 2
+Demoting process 5 to Q2
+Chosen process 5 with 8 tickets in Q2 in CPU 2
+Process 5 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 5 with 8 tickets in Q1 in CPU 2
+Demoting process 5 to Q2
+Chosen process 5 with 7 tickets in Q2 in CPU 2
+Setting tickets for process 5 to 25
+Process 5 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 25 tickets in Q1 in CPU 1
+Demoting process 6 to Q2
+Chosen process 6 with 24 tickets in Q2 in CPU 2
+Chosen process 6 with 24 tickets in Q2 in CPU 2
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 24 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 23 tickets in Q2 in CPU 0
+Chosen process 6 with 23 tickets in Q2 in CPU 0
+Chosen process 6 with 23 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 23 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 22 tickets in Q2 in CPU 0
+Chosen process 6 with 22 tickets in Q2 in CPU 0
+Chosen process 6 with 22 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 22 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 21 tickets in Q2 in CPU 0
+tChosen process 6 with 21 tickets in Q2 in CPU 0
+eChosen process 6 with 21 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 21 tickets in Q1 in CPU 0
+sDemoting process 6 to Q2
+Chosen process 6 with 20 tickets in Q2 in CPU 0
+tChosen process 6 with 20 tickets in Q2 in CPU 0
+Chosen process 6 with 20 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 20 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 19 tickets in Q2 in CPU 0
+Chosen process 6 with 19 tickets in Q2 in CPU 0
+pChosen process 6 with 19 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 19 tickets in Q1 in CPU 0
+rDemoting process 6 to Q2
+Chosen process 6 with 24 tickets in Q2 in CPU 1
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+oChosen process 6 with 24 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 23 tickets in Q2 in CPU 0
+cChosen process 6 with 23 tickets in Q2 in CPU 0
+iChosen process 6 with 23 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 23 tickets in Q1 in CPU 0
+nDemoting process 6 to Q2
+Chosen process 6 with 22 tickets in Q2 in CPU 0
+Chosen process 6 with 22 tickets in Q2 in CPU 0
+fChosen process 6 with 22 tickets in Q2 in CPU 0
+oProcess 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 22 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 21 tickets in Q2 in CPU 0
+Chosen process 6 with 21 tickets in Q2 in CPU 0
+
+Chosen process 2 with 10 tickets in Q1 in CPU 1
+Demoting process 2 to Q2
+Chosen process 7 with 10 tickets in Q1 in CPU 2
+Demoting process 7 to Q2
+Chosen process 7 with 9 tickets in Q2 in CPU 1
+Process 7 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 7 with 9 tickets in Q1 in CPU 1
+Demoting process 7 to Q2
+Chosen process 7 with 8 tickets in Q2 in CPU 1
+Process 7 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 7 with 8 tickets in Q1 in CPU 1
+Demoting process 7 to Q2
+Chosen process 7 with 7 tickets in Q2 in CPU 1
+PID | In UseChosen process 6 with 21 tickets in Q2 in CPU 2
+| InQ | Original Tickets | Current Tickets | Time Slices
+1 1 1 10 10 25
+2 1 2 10 9 16
+6 1 2 25 21 53
+7 1 2 10 7 5
+5 1 1 25 25 6
+Process 7 voluntarily gave up CPU, promoting to Q1, State: 5
+Chosen process 2 with 9 tickets in Q2 in CPU 1
+$ Process 2 voluntarily gave up CPU, promoting to Q1, State: 2
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 21 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 20 tickets in Q2 in CPU 0
+Chosen process 6 with 20 tickets in Q2 in CPU 0
+Chosen process 6 with 20 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 20 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 19 tickets in Q2 in CPU 2
+Chosen process 6 with 19 tickets in Q2 in CPU 0
+Chosen process 6 with 19 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 19 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 18 tickets in Q2 in CPU 0
+Chosen process 6 with 18 tickets in Q2 in CPU 0
+Chosen process 6 with 18 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 18 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 17 tickets in Q2 in CPU 0
+Chosen process 6 with 17 tickets in Q2 in CPU 0
+Chosen process 6 with 17 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 17 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 16 tickets in Q2 in CPU 0
+Chosen process 6 with 16 tickets in Q2 in CPU 0
+Chosen process 6 with 16 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 16 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 15 tickets in Q2 in CPU 0
+Chosen process 6 with 15 tickets in Q2 in CPU 0
+Chosen process 6 with 15 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 15 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 14 tickets in Q2 in CPU 0
+Chosen process 6 with 14 tickets in Q2 in CPU 0
+Chosen process 6 with 14 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 14 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 13 tickets in Q2 in CPU 2
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 25 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 24 tickets in Q2 in CPU 1
+Chosen process 6 with 24 tickets in Q2 in CPU 0
+Chosen process 6 with 24 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 24 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 23 tickets in Q2 in CPU 0
+Chosen process 6 with 23 tickets in Q2 in CPU 0
+Chosen process 6 with 23 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 23 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 22 tickets in Q2 in CPU 1
+Chosen process 6 with 22 tickets in Q2 in CPU 0
+Chosen process 6 with 22 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 22 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 21 tickets in Q2 in CPU 1
+Chosen process 6 with 21 tickets in Q2 in CPU 0
+Chosen process 6 with 21 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 21 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 20 tickets in Q2 in CPU 0
+Chosen process 6 with 20 tickets in Q2 in CPU 0
+Chosen process 6 with 20 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 20 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 19 tickets in Q2 in CPU 0
+Chosen process 6 with 19 tickets in Q2 in CPU 0
+Chosen process 6 with 19 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 19 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 18 tickets in Q2 in CPU 2
+Chosen process 6 with 18 tickets in Q2 in CPU 0
+Chosen process 6 with 18 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 18 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 17 tickets in Q2 in CPU 1
+Chosen process 6 with 17 tickets in Q2 in CPU 0
+Chosen process 6 with 17 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 17 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 16 tickets in Q2 in CPU 0
+Chosen process 6 with 16 tickets in Q2 in CPU 0
+Chosen process 6 with 16 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 16 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 15 tickets in Q2 in CPU 2
+Chosen process 6 with 15 tickets in Q2 in CPU 0
+Chosen process 6 with 15 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 15 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 14 tickets in Q2 in CPU 0
+Chosen process 6 with 25 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 24 tickets in Q2 in CPU 0
+Chosen process 6 with 24 tickets in Q2 in CPU 0
+Chosen process 6 with 24 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 24 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 23 tickets in Q2 in CPU 0
+Chosen process 6 with 23 tickets in Q2 in CPU 0
+Chosen process 6 with 23 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 23 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 22 tickets in Q2 in CPU 1
+Chosen process 6 with 22 tickets in Q2 in CPU 0
+Chosen process 6 with 22 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 22 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 21 tickets in Q2 in CPU 0
+Chosen process 6 with 21 tickets in Q2 in CPU 0
+Chosen process 6 with 21 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 21 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 20 tickets in Q2 in CPU 1
+Chosen process 6 with 20 tickets in Q2 in CPU 0
+Chosen process 6 with 20 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 20 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 19 tickets in Q2 in CPU 2
+Chosen process 6 with 19 tickets in Q2 in CPU 0
+Chosen process 6 with 19 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 19 tickets in Q1 in CPU 0
+tDemoting process 6 to Q2
+Chosen process 6 with 18 tickets in Q2 in CPU 1
+eChosen process 6 with 18 tickets in Q2 in CPU 0
+stChosen process 6 with 18 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 18 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 17 tickets in Q2 in CPU 0
+Chosen process 6 with 17 tickets in Q2 in CPU 0
+Chosen process 6 with 17 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 17 tickets in Q1 in CPU 0
+pDemoting process 6 to Q2
+Chosen process 6 with 16 tickets in Q2 in CPU 0
+rChosen process 6 with 16 tickets in Q2 in CPU 0
+oChosen process 6 with 16 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+cChosen process 6 with 16 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 15 tickets in Q2 in CPU 2
+iChosen process 6 with 15 tickets in Q2 in CPU 0
+nChosen process 6 with 15 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 15 tickets in Q1 in CPU 0
+fDemoting process 6 to Q2
+Chosen process 6 with 14 tickets in Q2 in CPU 0
+oChosen process 6 with 14 tickets in Q2 in CPU 0
+Chosen process 6 with 25 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 24 tickets in Q2 in CPU 0
+
+Chosen process 2 with 10 tickets in Q1 in CPU 1
+Demoting process 2 to Q2
+Chosen process 8 with 10 tickets in Q1 in CPU 1
+PID | In Use | InQ | Original Tickets | Current Tickets | Time Slices
+1 1 1 10 10 25
+2 1 2 10 9 18
+6 1 2 25 24 230
+8 1 1 10 9 0
+5 1 1 25 25 6
+Demoting process 8 to Q2
+Chosen process 2 with 9 tickets in Q2 in CPU 1
+$ Process 2 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 24 tickets in Q2 in CPU 0
+Chosen process 6 with 24 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 24 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 23 tickets in Q2 in CPU 0
+Chosen process 6 with 23 tickets in Q2 in CPU 0
+Chosen process 6 with 23 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 23 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 22 tickets in Q2 in CPU 0
+Chosen process 6 with 22 tickets in Q2 in CPU 0
+Chosen process 6 with 22 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 22 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 21 tickets in Q2 in CPU 0
+Chosen process 6 with 21 tickets in Q2 in CPU 0
+Chosen process 6 with 21 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 21 tickets in Q1 in CPU 0
+Demoting process 6 to Q2
+Chosen process 6 with 20 tickets in Q2 in CPU 0
+Chosen process 6 with 20 tickets in Q2 in CPU 0
+Chosen process 6 with 20 tickets in Q2 in CPU 0
+Process 6 voluntarily gave up CPU, promoting to Q1, State: 2
+Chosen process 6 with 20 tickets in Q1 in CPU 0
+QEMU: Terminated

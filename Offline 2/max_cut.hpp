@@ -11,6 +11,8 @@ public:
     int maxIter;
     double alpha;
     int localSearchIterations;
+    int avgLocalSearchIterations;
+    int avgLocalSearchCutValue;
     // vector<int> solution;
 
     MaxCut(int vertices, int edges, vector<vector<int>> graph, int maxIter = 1000, double alpha = 0.5)
@@ -22,6 +24,15 @@ public:
         this->alpha = alpha;
         this->localSearchIterations = 0;
         // this->solution.resize(vertices);
+    }
+
+    int getAvgLocalSearchCutValue()
+    {
+        return this->avgLocalSearchCutValue;
+    }
+    int getAvgLocalSearchIterations()
+    {
+        return this->avgLocalSearchIterations;
     }
 
     vector<int> randomSolution()
@@ -318,17 +329,22 @@ public:
     {
         vector<int> bestSol = randomSolution();
         int bestCutValue = calculateCutValue(bestSol);
+        int totalCutValue = 0;
+        int totalLocalIterations = 0;
         for (int i = 0; i < iteration; i++)
         {
             vector<int> sol = SemiGreedySolution(this->alpha);
             sol = LocalSearch(sol);
             int cutValue = calculateCutValue(sol);
+            totalCutValue += cutValue;
             if (cutValue > bestCutValue)
             {
                 bestCutValue = cutValue;
                 bestSol = sol;
             }
         }
+        this->avgLocalSearchCutValue = totalCutValue / iteration;
+        this->avgLocalSearchIterations = this->localSearchIterations / iteration;
         return bestSol;
     }
 };

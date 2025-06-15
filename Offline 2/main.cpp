@@ -7,7 +7,6 @@ unordered_map<string, int> known_bests{
 
 void makeCSV(ofstream &csv, const string &filename, int graph_id, MaxCut &max_cut, int vertices, int edges, double alpha, int iterations)
 {
-    // Run RandomizedCut
     int avgCutWeight = max_cut.randomizedMaxCut();
 
     vector<int> greedySol = max_cut.GreedySolution();
@@ -16,18 +15,30 @@ void makeCSV(ofstream &csv, const string &filename, int graph_id, MaxCut &max_cu
     vector<int> semiGreedySol = max_cut.SemiGreedySolution(alpha);
     int semiGreedyCutVal = max_cut.calculateCutValue(semiGreedySol);
 
-    vector<int> localSearchSol = max_cut.LocalSearch(semiGreedySol);
-    int localSearchCutVal = max_cut.calculateCutValue(localSearchSol);
-    int localSearchIterations = max_cut.localSearchIterations;
+    // vector<int> localSearchSol = max_cut.LocalSearch(semiGreedySol);
+    // int localSearchCutVal = max_cut.calculateCutValue(localSearchSol);
+    // int localSearchIterations = max_cut.localSearchIterations;
 
     vector<int> graspSol = max_cut.GRASP(iterations);
     int graspCutVal = max_cut.calculateCutValue(graspSol);
 
-    // Write to CSV
+    int localSearchIterations = max_cut.getAvgLocalSearchIterations();
+    int localSearchCutVal = max_cut.getAvgLocalSearchCutValue();
+
     csv << "G" << graph_id << "," << vertices << "," << edges << ","
         << avgCutWeight << "," << greedyCutVal << "," << semiGreedyCutVal << ","
-        << localSearchIterations << "," << localSearchCutVal << "," << iterations << "," << graspCutVal << ","
-        << known_bests["G" + to_string(graph_id)] << "\n";
+        << localSearchIterations << "," << localSearchCutVal << "," << iterations << "," << graspCutVal << ",";
+
+    string known_best_key = "G" + to_string(graph_id);
+    if (known_bests.count(known_best_key))
+    {
+        csv << known_bests[known_best_key];
+    }
+    else
+    {
+        csv << "N/A";
+    }
+    csv << "\n";
 
     csv.flush();
 }
@@ -119,7 +130,10 @@ int main()
         }
         cout << "Input taken successfully from " << inputFile << endl;
         inFile.close();
-        int iterations = 10;
+        int iterations = 50;
+        if (vertices > 1000){
+            iterations = 10;
+        }
         double alpha = 0.5;
         MaxCut maxCut(vertices, edges, graph, iterations, alpha);
         makeCSV(csvFile, inputFile, id, maxCut, vertices, edges, alpha, iterations);
