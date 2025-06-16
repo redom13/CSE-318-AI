@@ -43,6 +43,9 @@ def write_ai_move(filepath, board):
 def wait_for_human_move(filepath):
     while True:
         header, board = parse_board_from_file(filepath)
+        if board is None:
+            time.sleep(0.5)
+            continue
         red_count , _ = ball_count(board)
         if header == "Human Move:" and red_count > 0:
             print("Detected Human Move. Processing...")
